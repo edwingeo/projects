@@ -19,5 +19,5 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::group(['middleware' => ['auth:web']], function () {
-	Route::get('/taxcode', 'HomeController@index')->name('home.tax');
+	Route::get('/stocks', 'HomeController@getStock')->name('home.getstock');
 });
